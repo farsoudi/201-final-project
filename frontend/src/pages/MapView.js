@@ -7,7 +7,7 @@ import iconShadow from "leaflet/dist/images/marker-shadow.png";
 import "../styles/MapViewPage.css";
 
 
-// ✅ Default Leaflet icon fix
+// Default Leaflet icon fix
 let DefaultIcon = L.icon({
   iconUrl,
   shadowUrl: iconShadow,
@@ -16,7 +16,7 @@ let DefaultIcon = L.icon({
 });
 L.Marker.prototype.options.icon = DefaultIcon;
 
-// 🧭 Helper to move map view when a spot is selected
+//  Helper to move map view when a spot is selected
 function FlyToMarker({ position }) {
   const map = useMap();
   useEffect(() => {
@@ -141,7 +141,7 @@ function App() {
         {/* Right: Map */}
         <div className="map">
           <MapContainer
-            center={[34.0205, -118.2856]} // 🎯 USC center
+            center={[34.0205, -118.2856]} // USC center
             zoom={17}
             style={{ height: "100%", width: "100%", borderRadius: "16px" }}
             scrollWheelZoom={true}
